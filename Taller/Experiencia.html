@@ -9,20 +9,55 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta name="robots" content="noarchive">
-    
-    <title>Document</title>
+
+    <link rel="stylesheet" href="CSS/Estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 1400, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+            } // End if
+        });
+        });
+    </script>
+
+    <title>Experiencia</title>
 </head>
 <body>
-    <nav>
-        <ul>
-			<li><a href="Bienvenida.html">Bienvenida</a></li>
-			<li><a href="Datos_biograficos.html">Datos Biograficos</a></li>
-			<li><a href="Experiencia.html">Experiencia</a></li>
-			<li><a href="Material_intereres.html">Material de interes</a></li>
-		</ul>
-    </nav>
+    <nav class="Navbar">
+        <div class="NavbarButtons">
+            <a href="Bienvenida.html">Bienvenida</a>
+        </div>
+        <div class="NavbarButtons">
+            <a href="Datos_biograficos.html">Datos Biograficos</a>
+        </div>
+        <div class="NavbarButtons">
+            <a href="Experiencia.html">Experiencia</a>
+        </div>
+        <div class="NavbarButtons">
+            <a href="Material_intereres.html">Material de interes</a>
+        </div>
+    </nav>   
 
-    <ul>
+    <ul class="VinetasDif">
         <li>
             <a href="#seccionLaboral">Experiencia laboral</a>
             <ul>
@@ -46,7 +81,7 @@
             </ul>
         </li>
     </ul>
-    <div>
+    <div class="SeccionUno">
         <h1 id="seccionLaboral">Experiencia laboral</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus odio nostrum sint aliquam totam quidem, dicta odit vero animi consectetur. Iure fugit veritatis nesciunt quo obcaecati ducimus quibusdam quas labore!</p>
         <br>
@@ -56,7 +91,7 @@
         <h2 id="subSAOLab">S.A.O</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolorum fugiat temporibus quaerat quo laborum voluptate. Odit commodi placeat perspiciatis eligendi delectus, temporibus laudantium cum accusantium ex repellendus, voluptatum quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit adipisci iure, in quas autem explicabo natus veritatis est doloremque delectus dignissimos vel magnam sint, enim vero fugiat sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa minima dignissimos autem fugit vel omnis, amet sint sequi quam excepturi, nostrum corrupti commodi inventore, incidunt libero rem maiores perferendis dolor.</p>
     </div>
-    <div>
+    <div class="SeccionUno">
         <h1 id="seccionPersonal">Experiencia personal</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo veritatis aspernatur, assumenda fuga temporibus soluta, recusandae perferendis, voluptate similique ex repellat quae qui nemo. Quae maxime facere officia iusto placeat?</p>
         <br>

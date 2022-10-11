@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap'); 
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+.Navbar{
+    background-color: #DF9E36;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: sticky;
+    top: 0px;
+    height: 30px;
+}
+
+.NavbarButtons {
+    background-color: #DF9E36;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.NavbarButtons a{
+    text-decoration: none;
+}
+.NavbarButtons:hover{
+ background-color: #3677DF;
+} 
+
+table tr th{
+    background-color: #3688DF;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(odd) td{
+    background-color: greenyellow;
+
+} 
+
+
+.SeccionUno{
+    border: 2px solid rgb(99, 9, 103);
+    margin: 30px;
+    background: linear-gradient(to right, #62CBB4
+    , #ADCB62);
+    text-align: center;
+} 
+
+.VinetasDif{
+    color: #f02d57;
+    list-style-type: lower-greek;
+}
+
+.VinetasDif ul{
+    color: #652DF0;
+    list-style-type:lower-latin;
+    text-decoration: none;
+} 
+.ImgBienvenida img{
+    height: 200px;
+    width: 300px;
+    float: left;
+} 
+.Imagenes img{
+    height: 300px;
+    width: 400px;
+}
