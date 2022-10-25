@@ -5,6 +5,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 
 import java.util.List;
 
-public interface PanteraRepository extends PagingAndSortingRepository<Pantera, Integer> {
-    Pantera findById(int idPantera);
+public interface PanteraRepository extends CrudRepository <Pantera, Integer> {
+
+
 }
