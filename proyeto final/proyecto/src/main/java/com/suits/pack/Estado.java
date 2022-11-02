@@ -1,2 +1,5 @@
-package com.suits.pack;public enum Estado {
+package com.suits.pack;
+
+public enum Estado {
+    En_Uso,Disponible
 }

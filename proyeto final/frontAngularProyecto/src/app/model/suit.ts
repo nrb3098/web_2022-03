@@ -1,5 +1,5 @@
 export class Suit {
     constructor(
-        public idSuit: number, public name: string, public state:string, public wearer: number
+        public idSuit: number, public name: string, public state:string
     ){}
 }
