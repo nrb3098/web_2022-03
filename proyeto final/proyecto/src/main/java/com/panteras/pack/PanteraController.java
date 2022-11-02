@@ -21,7 +21,10 @@ public class PanteraController {
         // This returns a JSON with the users
         return panteraService.getPantera();
     }
-
+    @GetMapping("/home/{name}")
+    public @ResponseBody Iterable<Pantera> getSomePanteras(@PathVariable String name){
+        return panteraService.getPanteraLike(name);
+    }
     @PostMapping("/CrearPantera")
     public boolean crearPantera(@RequestBody Pantera nuevo){
         return panteraService.crearPantera(nuevo);

@@ -19,6 +19,12 @@ public class PanteraService {
         panteras = repositoryPantera.findAll();
         return panteras;
     }
+
+    public  Iterable<Pantera>getPanteraLike(String name){
+        Iterable<Pantera> panteras = new ArrayList<>();
+        panteras = repositoryPantera.findBynameLike(name);
+        return panteras;
+    }
     public boolean crearPantera(Pantera pantera) {
         try {
             if (pantera != null) {
