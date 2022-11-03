@@ -1,5 +1,11 @@
-<nav>
-  <a routerLink="/ListView">Panteras</a>
-</nav>
-<app-panther-create></app-panther-create>
-<router-outlet></router-outlet>
+<body>
+  <app-navbar></app-navbar>
+  <div>
+    <img class="center-block" width="400" alt="logoBP" src="./assets/logoBP.jpg" margin-left="50%">
+  </div>
+  <div class="center">
+    <button><a href="/ListView">Pantera</a></button>
+    <button><a href="/SuitsView">Trajes</a></button>
+  </div>
+  <router-outlet></router-outlet>
+</body>

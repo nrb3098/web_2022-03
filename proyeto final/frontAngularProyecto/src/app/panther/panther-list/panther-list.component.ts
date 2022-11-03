@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PanteraService } from 'src/app/shared/pantera.service';
 import { Panther } from "../../model/panther";
 @Component({
   selector: 'app-panther-list',
@@ -8,18 +9,15 @@ import { Panther } from "../../model/panther";
 export class PantherListComponent implements OnInit {
 
 
-  pantherArray: Panther[] = [
-    {idPantera: 1, name: "Gold Vibranium Suit"},
-    {idPantera: 2, name: "Diamond Vibranium Suit"},
-    {idPantera: 3, name: "Black Vibranium Suit"},
-    {idPantera: 4, name: "Nano-Vibranium Suit"}
-  ];
+  pantherArray: Panther[] = [];
 
   selectedPanther: Panther = new Panther(0, "");
 
-  constructor() { }
+  constructor(private panteraService: PanteraService) { }
 
   ngOnInit(): void {
+    this.panteraService.findAll().subscribe(panther => {this.pantherArray = panther});
+
   }
 
   editPanther(panther: Panther){

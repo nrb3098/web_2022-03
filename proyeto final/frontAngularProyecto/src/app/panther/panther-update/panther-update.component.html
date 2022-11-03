@@ -1,1 +1,41 @@
 <p>panther-update works!</p>
+
+<div>
+    <br>
+    <table>
+
+        <th>idPantera</th>
+        <th>Name</th>
+        <ng-container *ngFor="let Panther of pantherArray">
+            <tr>
+                <td>{{Panther.idPantera}}</td>
+                <td>{{Panther.name}}</td>
+                <button class="btn btn-primary" (click)="deletePanther(Panther.idPantera)">
+                    Eliminar Pantera
+                </button>
+                <button class="btn btn-primary" (click)="editPanther(Panther)">
+                    Editar Pantera
+                </button>
+            </tr>
+        </ng-container>
+    </table>
+    <br>
+</div>
+<br>
+<div class="card mt-2">
+    <div class="card-body">
+        <div class="card-title">
+            Modificar Pantera
+        </div>
+        <div class="form-group">
+            <input type="number" placeholder="Inserte el ID del Traje A Modificar" class="form-control">
+            <input type="string" placeholder="Inserte el Nombre del Traje A Modificar" class="form-control">
+        </div>
+    </div>
+    <!-- Toca que mires lo de modificar porque estas quieres recibir una 
+    pantera pero al ser un formulario no se lee igual que una tabla de
+    seleccion -->
+    <button (click)="agregar()" class="btn btn-primary">
+        Modificar Pantera
+    </button>
+</div>

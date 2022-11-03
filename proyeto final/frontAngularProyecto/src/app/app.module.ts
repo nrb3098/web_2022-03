@@ -10,6 +10,8 @@ import { PantherDeleteComponent } from './panther/panther-delete/panther-delete.
 import { PantherUpdateComponent } from './panther/panther-update/panther-update.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SuitListComponent } from './suit/suit-list/suit-list.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { SuitCreateComponent } from './suit/suit-create/suit-create.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { SuitListComponent } from './suit/suit-list/suit-list.component';
     PantherCreateComponent,
     PantherDeleteComponent,
     PantherUpdateComponent,
-    SuitListComponent
+    SuitListComponent,
+    NavbarComponent,
+    SuitCreateComponent
   ],
   imports: [
 

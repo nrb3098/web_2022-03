@@ -1,1 +1,21 @@
-<p>suit-list works!</p>
+<div>
+  <table>
+
+    <th>idSuit</th>
+    <th>Name</th>
+    <ng-container *ngFor="let Suit of suitArray">
+      <tr>
+        <td>{{Suit.idSuit}}</td>
+        <td>{{Suit.name}}</td>
+        <button class="btn btn-primary" (click)="prestamo(Suit)">
+          Prestar
+        </button>
+      </tr>
+    </ng-container>
+  </table>
+  <div class="center">
+    <button class="btn btn-dark"><a href="/CreateP">Agregar Traje</a></button>
+  </div>
+
+
+</div>

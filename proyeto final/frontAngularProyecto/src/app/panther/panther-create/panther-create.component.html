@@ -1,1 +1,37 @@
-<p>panther-create works!</p>
+<p class="pColor">panther-create works!</p>
+<div>
+    <br>
+    <table>
+
+        <th>idPantera</th>
+        <th>Name</th>
+        <ng-container *ngFor="let Panther of pantherArray">
+            <tr>
+                <td>{{Panther.idPantera}}</td>
+                <td>{{Panther.name}}</td>
+                <button class="btn btn-primary" (click)="deletePanther(Panther.idPantera)">
+                    Eliminar Pantera
+                </button>
+                <button class="btn btn-primary" (click)="editPanther(Panther)">
+                    Editar Pantera
+                </button>
+            </tr>
+        </ng-container>
+    </table>
+    <br>
+</div>
+<br>
+<div class="card mt-2">
+    <div class="card-body">
+        <div class="card-title">
+            Agregar Pantera
+        </div>
+        <div class="form-group">
+            <input type="sting" placeholder="Inserte el Nombre del Traje"
+                class="form-control">
+        </div>
+    </div>
+    <button (click)="agregar()" class="btn btn-primary">
+        Agregar Pantera
+    </button>
+</div>
