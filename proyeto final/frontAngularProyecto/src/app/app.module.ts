@@ -9,6 +9,7 @@ import { PantherCreateComponent } from './panther/panther-create/panther-create.
 import { PantherDeleteComponent } from './panther/panther-delete/panther-delete.component';
 import { PantherUpdateComponent } from './panther/panther-update/panther-update.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SuitListComponent } from './suit/suit-list/suit-list.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PantherListComponent,
     PantherCreateComponent,
     PantherDeleteComponent,
-    PantherUpdateComponent
+    PantherUpdateComponent,
+    SuitListComponent
   ],
   imports: [
 
