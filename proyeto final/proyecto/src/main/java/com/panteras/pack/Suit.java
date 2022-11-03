@@ -1,4 +1,4 @@
-package com.suits.pack;
+package com.panteras.pack;
 
 import lombok.Data;
 
@@ -14,19 +14,20 @@ public class Suit {
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private Estado estado;
 
     protected Suit() {}
 
     public Suit(String name) {
         this.name = name;
-        this.estado = Estado.Disponible;
+        this.estado = Estado.DISPONIBLE;
     }
 
     @Override
     public String toString() {
         return String.format(
-                "com.suits.pack.Suit[id=%d, Name='%s', State='%s']",
+                "com.panteras.pack.Suit[id=%d, Name='%s', State='%s']",
                 idSuit, name, estado);
     }
 }
