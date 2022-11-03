@@ -17,6 +17,7 @@ public class PanteraController {
 
 
     @GetMapping("/home")
+    @CrossOrigin(origins = "http://localhost:4200")
     public @ResponseBody Iterable<Pantera> getAllPanteras() {
         // This returns a JSON with the users
         return panteraService.getPantera();

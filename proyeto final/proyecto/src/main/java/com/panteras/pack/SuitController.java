@@ -13,6 +13,7 @@ public class SuitController {
 
 
         @GetMapping("/suits")
+        @CrossOrigin(origins = "http://localhost:4200")
         public @ResponseBody Iterable<Suit> getAllSuits() {
             // This returns a JSON with the users
             return suitService.getSuit();
@@ -24,6 +25,7 @@ public class SuitController {
         }
 
         @PutMapping( "/prestarSuit")
+        @CrossOrigin(origins = "http://localhost:4200")
         public void prestarSuit(@RequestBody Suit suit){
         suitService.prestar(suit);
     }
