@@ -5,10 +5,12 @@ import { PantherCreateComponent } from './panther/panther-create/panther-create.
 import { PantherListComponent } from './panther/panther-list/panther-list.component';
 import { PantherUpdateComponent } from './panther/panther-update/panther-update.component';
 import { SuitListComponent } from './suit/suit-list/suit-list.component';
+import { AuthGuard } from './guard/auth.guard';
+
 
 const routes: Routes = [
   { path: 'home', component: AppComponent },
-  { path: 'ListView', component: PantherListComponent},
+  { path: 'ListView', component: PantherListComponent, canActivate: [AuthGuard]},
   { path: 'CreateP', component: PantherCreateComponent},
   { path: 'ModP', component: PantherUpdateComponent},
   {path: 'SuitsView', component:SuitListComponent}

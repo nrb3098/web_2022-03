@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { KeycloakService } from 'keycloak-angular';
 import { PanteraService } from 'src/app/shared/pantera.service';
 import { Panther } from "../../model/panther";
+
+
 @Component({
   selector: 'app-panther-list',
   templateUrl: './panther-list.component.html',
