@@ -1,25 +1,27 @@
 package PruebasAutomaticas;
 
 import org.hibernate.annotations.UpdateTimestamp;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.web.server.LocalServerPort;
 
 import com.panteras.pack.PanteraRepository;
 
 import net.bytebuddy.asm.Advice.AssignReturned.ToArguments;
 
-@SpringBootTest(webEnviroment = WebEnviroment.RANDOM_PORT)
-public class PanteraControllerIntegrationTest {
+@SpringBootTest(webEnviroment = WebEnviroment.DEFINED_PORT)
+@DirtiesContext(classMode = ClassMode.BEFORE_EACH_TEST_METHOD)
+public class PanteraSystemTest {
 
-    private ChromeDriver driver;
-    private WebDriverWait wait;
-
+    @LocalServerPort
+    private int puerto;
 
     @Autowired
     PanteraRepository panteraRepository;
 
-    String URL = "http://localhost:4200";
+
+    @Autowired
+    TestRestTemplate rest;
 
     @Test
     void crearPanteraTest(){
@@ -43,4 +45,5 @@ public class PanteraControllerIntegrationTest {
         assertEquals(true, eliminarP);
 
     }
+
 }
