@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.ServletException;
 import java.util.Optional;
 
 @RestController // This means that this class is a Controller
@@ -22,6 +23,7 @@ public class PanteraController {
         // This returns a JSON with the users
         return panteraService.getPantera();
     }
+
     @GetMapping("/home/{name}")
     public @ResponseBody Iterable<Pantera> getSomePanteras(@PathVariable String name){
         return panteraService.getPanteraLike(name);
