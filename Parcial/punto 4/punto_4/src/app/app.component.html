@@ -1,0 +1,8 @@
+<p>Foto seleccionada</p>
+<img [src]="selectedImg.url" />
+
+
+<p>Seleccione foto</p>
+<div *ngFor="let img of imgArray">
+  <input type="image" src={{img.thumbnailUrl}} (click)="seleccionada(img)">
+</div>

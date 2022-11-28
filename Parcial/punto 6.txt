@@ -1,0 +1,7 @@
+a.	¿Cómo se construye un token JWT? Es un string aleatorio? Justifique
+
+se crea utilizando payload par poder crear una encriptacion de base 64 que da como resultado un string muy largo y dificl de clonar por lo que no es un string aleatorio
+
+b.	En el contexto de los temas tratados en el curso, ¿Qué es MAC? 
+
+hace referncia a los puertos por los que se permite la escucha y salida de peticones de los protocolos.

@@ -1,0 +1,42 @@
+h1{
+    text-decoration: line-through;
+    /*text-decoration: overline;*/
+    /*text-decoration: underline;*/
+}
+
+
+#div_grande{
+border: 5px;
+border-color: black;
+border-style: solid;
+width: 600px;
+height: 130px;
+display: flex;
+justify-content: space-between;
+}
+
+#img1{
+    box-shadow: 10px 10px 0 0 rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 5px;
+    border-color: blue;
+    width: fit-content;
+    display: inline-block;
+    
+}
+#img2{
+    
+    box-shadow: 10px 10px 8px 0 rgb(0, 0, 0);
+    border-style: dashed;
+    border-width: 5px;
+    border-color: red;    
+    width: fit-content;
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+img{
+    width: 200px;
+}

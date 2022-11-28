@@ -1,0 +1,10 @@
+<h1>Arma tu Sandwich:</h1>
+
+<select [(ngModel)]="selectedIngrediente1" multiple="true">
+    <option *ngFor="let ingrediente of ingredientesDerecha">{{ingrediente}}</option>
+</select>
+<button (click)="agregar(selectedIngrediente1)">Agregar</button>
+<button (click)="quitar(selectedIngrediente2)">Quitar</button>
+<select [(ngModel)]="selectedIngrediente2" multiple="true">
+    <option *ngFor="let escogido of ingredientesIzquierda">{{escogido}}</option>
+</select>
